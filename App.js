@@ -15,9 +15,9 @@ const styles = StyleSheet.create({
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.wrapper}>
       <WebView
-        style={styles.container}
+        style={styles.webview}
         source={{ uri: "https://myplaceonline.com/" }}
       />
     </View>
