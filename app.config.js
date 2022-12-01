@@ -4,7 +4,7 @@ const MAJOR_VERSION_NUMBER = 2;
 const MINOR_VERSION_NUMBER = 1;
 const PATCH_VERSION_NUMBER = 20221201;
 const FULL_APP_VERSION = MAJOR_VERSION_NUMBER + "." + MINOR_VERSION_NUMBER + "." + PATCH_VERSION_NUMBER;
-const PACKAGE = "com.myplaceonline.main";
+const PACKAGE = "com.myplaceonline";
 const BGCOLOR = "#ffffff";
 
 export default {
