@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import Constants from 'expo-constants';
 import { StatusBar } from 'expo-status-bar';
+import * as Linking from 'expo-linking';
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -35,7 +36,8 @@ export default function App() {
         }}
         onShouldStartLoadWithRequest={(request) => {
           if (request.url.startsWith(BASE_URL)) {
-
+            Linking.openURL(request.url);
+            return false;
           }
           return true;
         }}
