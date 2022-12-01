@@ -21,6 +21,16 @@ export default function App() {
       <WebView
         style={styles.webview}
         source={{ uri: "https://myplaceonline.com/" }}
+        mediaPlaybackRequiresUserAction={false}
+        allowsFullscreenVideo={true}
+        allowsInlineMediaPlayback={true}
+        allowsBackForwardNavigationGestures={true}
+        cacheEnabled={true}
+        sharedCookiesEnable={true}
+        pullToRefreshEnabled={true}
+        onError={(event) => {
+          console.warn('WebView error: ', event.nativeEvent);
+        }}
       />
     </View>
   );
