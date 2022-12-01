@@ -14,13 +14,15 @@ const styles = StyleSheet.create({
   },
 });
 
+const BASE_URL = "https://myplaceonline.com/";
+
 export default function App() {
   return (
     <View style={styles.wrapper}>
       <StatusBar style="dark" backgroundColor="#ffffff" />
       <WebView
         style={styles.webview}
-        source={{ uri: "https://myplaceonline.com/" }}
+        source={{ uri: BASE_URL }}
         mediaPlaybackRequiresUserAction={false}
         allowsFullscreenVideo={true}
         allowsInlineMediaPlayback={true}
@@ -30,6 +32,12 @@ export default function App() {
         pullToRefreshEnabled={true}
         onError={(event) => {
           console.warn('WebView error: ', event.nativeEvent);
+        }}
+        onShouldStartLoadWithRequest={(request) => {
+          if (request.url.startsWith(BASE_URL)) {
+
+          }
+          return true;
         }}
       />
     </View>
