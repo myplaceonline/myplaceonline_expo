@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import Constants from 'expo-constants';
 import { StatusBar } from 'expo-status-bar';
 import * as Linking from 'expo-linking';
+
+const BASE_URL = "https://myplaceonline.com/";
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -13,9 +15,25 @@ const styles = StyleSheet.create({
   webview: {
     flex: 1,
   },
+  center: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 15,
+  },
 });
 
-const BASE_URL = "https://myplaceonline.com/";
+function CustomActivityIndicator() {
+  return (
+    <View style={styles.center}>
+      <ActivityIndicator size="large" color="#000000" />
+    </View>
+  );
+}
 
 export default function App() {
   return (
@@ -41,6 +59,8 @@ export default function App() {
           }
           return true;
         }}
+        startInLoadingState={true}
+        renderLoading={() => <CustomActivityIndicator />}
       />
     </View>
   );
