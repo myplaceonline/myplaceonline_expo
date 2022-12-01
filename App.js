@@ -6,6 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import * as Linking from "expo-linking";
 
 const BASE_URL = "https://myplaceonline.com/";
+const DEBUG = false;
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -53,7 +54,7 @@ export default function App() {
           console.warn("WebView error: ", event.nativeEvent);
         }}
         onShouldStartLoadWithRequest={(request) => {
-          console.info("onShouldStartLoadWithRequest " + request.url);
+          if (DEBUG) console.info("onShouldStartLoadWithRequest " + request.url);
           if (request.url.startsWith("http") && !request.url.startsWith(BASE_URL)) {
             Linking.openURL(request.url);
             return false;
