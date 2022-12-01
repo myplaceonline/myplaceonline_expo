@@ -53,7 +53,7 @@ export default function App() {
           console.warn('WebView error: ', event.nativeEvent);
         }}
         onShouldStartLoadWithRequest={(request) => {
-          if (request.url.startsWith(BASE_URL)) {
+          if (!request.url.startsWith(BASE_URL)) {
             Linking.openURL(request.url);
             return false;
           }
