@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
-import { WebView } from 'react-native-webview';
-import Constants from 'expo-constants';
-import { StatusBar } from 'expo-status-bar';
-import * as Linking from 'expo-linking';
+import * as React from "react";
+import { ActivityIndicator, StyleSheet, View } from "react-native";
+import { WebView } from "react-native-webview";
+import Constants from "expo-constants";
+import { StatusBar } from "expo-status-bar";
+import * as Linking from "expo-linking";
 
 const BASE_URL = "https://myplaceonline.com/";
 
@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   center: {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 15,
   },
 });
@@ -50,10 +50,11 @@ export default function App() {
         sharedCookiesEnable={true}
         pullToRefreshEnabled={true}
         onError={(event) => {
-          console.warn('WebView error: ', event.nativeEvent);
+          console.warn("WebView error: ", event.nativeEvent);
         }}
         onShouldStartLoadWithRequest={(request) => {
-          if (!request.url.startsWith(BASE_URL)) {
+          console.info("onShouldStartLoadWithRequest " + request.url);
+          if (request.url.startsWith("http") && !request.url.startsWith(BASE_URL)) {
             Linking.openURL(request.url);
             return false;
           }
