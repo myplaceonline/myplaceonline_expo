@@ -30,6 +30,7 @@
            ```
     1. Update `android/app/src/main/res/values/styles.xml`
         1. Set `<item name="android:windowTranslucentStatus">false</item>` within the top section.
+    1. `sudo rm -rf /tmp/metro-cache/`
     1. Start Android Studio
     1. Open existing project } `$DIRECTORY/android`
     1. Disregard the prompt to upgrade Gradle
@@ -40,8 +41,8 @@
     1. Update the app icon:
         1. Right click on `app` } New } Image Asset
         1. Icon Type: Launcher Icons (Adaptive and Legacy)
-        1. Foreground Layer } Path: .../assets/icon.png
-        1. Resize: 74%
+        1. Foreground Layer } Path: /work/myplaceonline/src/myplaceonline/src/myplaceonline_expo/assets/icon.png
+        1. Resize: 44%
         1. Background Layer } Color: ffffff
         1. Next
         1. Finish
@@ -62,28 +63,28 @@
     1. Stop rails dev server, `sudo systemctl stop elasticsearch postgresql`, VS Code, and any other memory intensive programs
     1. Build } Generate Signed Bundle/APK
         1. Android App Bundle
-        1. Key store path: ...jks
-        1. Key store password: /passwords/
-        1. Key alias: ...
+        1. Key store path: /work/myplaceonline/src/myplaceonline/lib/keys/myplaceonline_android_phonegap.keystore
+        1. Key store password: https://myplaceonline.com/passwords/653
+        1. Key alias: myplaceonline_alias
         1. Key password: Same as above
-        1. Set encrypted key folder to ...
+        1. Set encrypted key folder to /work/myplaceonline/src/myplaceonline/lib/keys
         1. Next
-        1. Destination folder: ...
+        1. Destination folder: /work/myplaceonline/src/myplaceonline/lib/android/builds
         1. Build Variants: release
         1. Finish
         1. Do you want to add the following file to Git? } Remember, don't ask again; Cancel
-    1. `cd .../android/release/`
+    1. `cd /work/myplaceonline/src/myplaceonline/lib/android/builds/release/`
     1. `export ANDROID_HOME=$HOME/Android/Sdk/`
     1. `export PATH=${ANDROID_HOME}/platform-tools/:${PATH}`
     1. Connect Android phone
     1. `adb devices`
-    1. `adb uninstall com.myplaceonline.main`
+    1. `adb uninstall com.myplaceonline`
         1. If no devices, try `adb kill-server`; otherwise, try rebooting the phone
     1. `rm *apks toc.pb universal.apk 2>/dev/null`
     1. Download bundletool: https://developer.android.com/studio/command-line/bundletool
     1. Generate apks:
        ```
-       java -jar ~/Downloads/bundletool-all-*.jar build-apks --bundle=app-release.aab --output=app-release.apks --ks=....jks --ks-key-alias key0 --mode=universal
+       java -jar ~/Downloads/bundletool-all-*.jar build-apks --bundle=app-release.aab --output=app-release.apks --ks=/work/myplaceonline/src/myplaceonline/lib/keys/myplaceonline_android_phonegap.keystore --ks-key-alias myplaceonline_alias --mode=universal
        ```
     1. Install on Android phone:
         1. Simple:
