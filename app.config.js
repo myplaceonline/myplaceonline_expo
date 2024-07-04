@@ -39,15 +39,11 @@ export default {
       backgroundColor: BGCOLOR
     },
     backgroundColor: BGCOLOR,
-    androidStatusBar: {
-      backgroundColor: "#ffffff",
-      barStyle: "light-content",
-      translucent: false
-    }
   },
   androidStatusBar: {
-    translucent: true,
-    backgroundColor: "#00000000",
+    translucent: false,
+    barStyle: "light-content",
+    backgroundColor: "#ffffff",
   },
   web: {
     favicon: "./assets/favicon.png",

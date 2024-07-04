@@ -33,7 +33,7 @@
         1. Right click on `app` } New } Image Asset
         1. Icon Type: Launcher Icons (Adaptive and Legacy)
         1. Foreground Layer } Path: /work/myplaceonline/src/myplaceonline/src/myplaceonline_expo/assets/icon.png
-        1. Resize: 44%
+        1. Resize: 59%
         1. Background Layer } Color: ffffff
         1. Next
         1. Finish
@@ -58,7 +58,6 @@
         1. Key store password: https://myplaceonline.com/passwords/653
         1. Key alias: myplaceonline_alias
         1. Key password: Same as above
-        1. Set encrypted key folder to /work/myplaceonline/src/myplaceonline/lib/keys
         1. Next
         1. Destination folder: /work/myplaceonline/src/myplaceonline/lib/android/builds
         1. Build Variants: release
