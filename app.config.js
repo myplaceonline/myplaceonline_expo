@@ -17,7 +17,7 @@ export default {
   splash: {
     image: "./assets/splash.png",
     resizeMode: "cover",
-    backgroundColor: "#00000000",
+    backgroundColor: BGCOLOR,
   },
   updates: {
     enabled: false,
@@ -41,9 +41,7 @@ export default {
     backgroundColor: BGCOLOR,
   },
   androidStatusBar: {
-    translucent: false,
-    barStyle: "light-content",
-    backgroundColor: "#ffffff",
+    translucent: true,
   },
   web: {
     favicon: "./assets/favicon.png",

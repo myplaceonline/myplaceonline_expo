@@ -11,7 +11,8 @@ const DEBUG = false;
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    //marginTop: Constants.statusBarHeight,
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: "#ffffff",
   },
   webview: {
     flex: 1,

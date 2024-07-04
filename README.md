@@ -21,6 +21,8 @@
 1. `npx expo prebuild`
 1. Android:
     1. Apply <https://github.com/react-native-webview/react-native-webview/pull/3176/files>
+    1. Update `android/app/src/main/res/values/styles.xml`
+        1. Set `<item name="android:windowTranslucentStatus">true</item>` within the top section.
     1. `sudo rm -rf /tmp/metro-cache/`
     1. Start Android Studio
     1. Open existing project } `$DIRECTORY/android`
@@ -33,7 +35,7 @@
         1. Right click on `app` } New } Image Asset
         1. Icon Type: Launcher Icons (Adaptive and Legacy)
         1. Foreground Layer } Path: /work/myplaceonline/src/myplaceonline/src/myplaceonline_expo/assets/icon.png
-        1. Resize: 59%
+        1. Resize: 57%
         1. Background Layer } Color: ffffff
         1. Next
         1. Finish
