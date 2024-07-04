@@ -39,6 +39,11 @@ export default {
       backgroundColor: BGCOLOR
     },
     backgroundColor: BGCOLOR,
+    androidStatusBar: {
+      backgroundColor: "#ffffff",
+      barStyle: "light-content",
+      translucent: false
+    }
   },
   androidStatusBar: {
     translucent: true,

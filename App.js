@@ -11,7 +11,7 @@ const DEBUG = false;
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    paddingTop: Constants.statusBarHeight,
+    //marginTop: Constants.statusBarHeight,
   },
   webview: {
     flex: 1,
@@ -39,7 +39,7 @@ function CustomActivityIndicator() {
 export default function App() {
   return (
     <View style={styles.wrapper}>
-      <StatusBar style="dark" backgroundColor="#ffffff" />
+      {/*<StatusBar style="dark" backgroundColor="#ffffff" />*/}
       <WebView
         style={styles.webview}
         source={{ uri: BASE_URL }}

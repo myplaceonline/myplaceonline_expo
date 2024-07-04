@@ -20,16 +20,7 @@
        ```
 1. `npx expo prebuild`
 1. Android:
-    1. Update `android/app/build.gradle`:
-        1. Update `project.ext.react` to [disable JS minification in the release build](https://stackoverflow.com/a/49487208/4135310) for improved diagnostics:
-           ```
-           project.ext.react = [
-               enableHermes: true, // https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/installation/#android
-               extraPackagerArgs: [ '--minify=false' ]
-           ]
-           ```
-    1. Update `android/app/src/main/res/values/styles.xml`
-        1. Set `<item name="android:windowTranslucentStatus">false</item>` within the top section.
+    1. Apply <https://github.com/react-native-webview/react-native-webview/pull/3176/files>
     1. `sudo rm -rf /tmp/metro-cache/`
     1. Start Android Studio
     1. Open existing project } `$DIRECTORY/android`
