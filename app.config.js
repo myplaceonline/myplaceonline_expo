@@ -1,8 +1,8 @@
 // https://docs.expo.dev/versions/latest/config/app/
 
-const MAJOR_VERSION_NUMBER = 3;
+const MAJOR_VERSION_NUMBER = 4;
 const MINOR_VERSION_NUMBER = 1;
-const PATCH_VERSION_NUMBER = 20240704;
+const PATCH_VERSION_NUMBER = 20250717;
 const FULL_APP_VERSION = MAJOR_VERSION_NUMBER + "." + MINOR_VERSION_NUMBER + "." + PATCH_VERSION_NUMBER;
 const PACKAGE = "com.myplaceonline";
 const BGCOLOR = "#ffffff";
