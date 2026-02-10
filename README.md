@@ -64,6 +64,7 @@
         1. Build Variants: release
         1. Finish
         1. Do you want to add the following file to Git? } Remember, don't ask again; Cancel
+    1. `mv /work/myplaceonline/src/myplaceonline/src/myplaceonline_expo/android/app/release/* /work/myplaceonline/src/myplaceonline/lib/android/builds/release/`
     1. `cd /work/myplaceonline/src/myplaceonline/lib/android/builds/release/`
     1. `export ANDROID_HOME=$HOME/Android/Sdk/`
     1. `export PATH=${ANDROID_HOME}/platform-tools/:${PATH}`
@@ -139,6 +140,7 @@
             1. Go to <https://play.google.com/console/>
             1. User = root@myplaceonline.com
             1. Click on Myplaceonline
+            1. Click on Test and release
             1. Click on Production
             1. Click Create new release
             1. Upload aab file
