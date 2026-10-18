@@ -1,8 +1,8 @@
 // https://docs.expo.dev/versions/latest/config/app/
 
-const MAJOR_VERSION_NUMBER = 5;
+const MAJOR_VERSION_NUMBER = 6;
 const MINOR_VERSION_NUMBER = 1;
-const PATCH_VERSION_NUMBER = 20260209;
+const PATCH_VERSION_NUMBER = 20261018;
 const FULL_APP_VERSION = MAJOR_VERSION_NUMBER + "." + MINOR_VERSION_NUMBER + "." + PATCH_VERSION_NUMBER;
 const PACKAGE = "com.myplaceonline";
 const BGCOLOR = "#ffffff";
@@ -49,4 +49,7 @@ export default {
   developmentClient: {
     silentLaunch: true,
   },
+  "plugins": [
+    "expo-status-bar",
+  ]
 }
