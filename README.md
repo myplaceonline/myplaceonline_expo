@@ -64,7 +64,6 @@
         1. Build Variants: release
         1. Finish
         1. Do you want to add the following file to Git? } Remember, don't ask again; Cancel
-    1. `mv /work/myplaceonline/src/myplaceonline/src/myplaceonline_expo/android/app/release/* /work/myplaceonline/src/myplaceonline/lib/android/builds/release/`
     1. `cd /work/myplaceonline/src/myplaceonline/lib/android/builds/release/`
     1. `export ANDROID_HOME=$HOME/Android/Sdk/`
     1. `export PATH=${ANDROID_HOME}/platform-tools/:${PATH}`
@@ -147,7 +146,7 @@
             1. Under Release notes, summarize the updates (required)
             ```
             <en-US>
-            Various bug fixes
+            Upgrade to latest technologies
             </en-US>
             ```
             1. Click Save
