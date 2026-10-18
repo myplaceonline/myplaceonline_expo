@@ -40,9 +40,6 @@ export default {
     },
     backgroundColor: BGCOLOR,
   },
-  androidStatusBar: {
-    translucent: true,
-  },
   web: {
     favicon: "./assets/favicon.png",
   },
@@ -50,6 +47,12 @@ export default {
     silentLaunch: true,
   },
   "plugins": [
-    "expo-status-bar",
+    [
+      "expo-status-bar",
+      {
+        "hidden": false,
+        "style": "light"
+      }
+    ]
   ]
 }
