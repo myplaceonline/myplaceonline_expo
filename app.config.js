@@ -51,7 +51,7 @@ export default {
       "expo-status-bar",
       {
         "hidden": false,
-        "style": "light"
+        "style": "dark"
       }
     ]
   ]
