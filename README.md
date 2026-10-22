@@ -2,9 +2,6 @@
 
 ## Build for App Stores
 
-1. Update `PACKAGE` in `app.config.js`:
-    1. Android: `com.myplaceonline`
-    1. iOS: `com.myplaceonline.main`
 1. In `app.config.js`, increment `MAJOR_VERSION_NUMBER` (Android always requires that the major version is incremented), and set `PATCH_VERSION_NUMBER` to the current date.
 1. `git commit -am "Version X.Y.Z: Major changes"`
 1. `git tag X.Y.Z`
