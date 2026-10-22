@@ -7,16 +7,17 @@
 1. `git tag X.Y.Z`
 1. `git push && git push --tags`
 1. `git pull`
-1. Update packages
-    1. iOS
-       ```
-       sudo rm -rf /usr/local/lib/node_modules/expo-cli/node_modules/webpack-dev-server/node_modules/fsevents/.node-gyp
-       sudo mkdir /usr/local/lib/node_modules/expo-cli/node_modules/webpack-dev-server/node_modules/fsevents/.node-gyp
-       sudo npm i -g --force expo expo-cli eas-cli
-       npm install
-       ```
 1. `npx expo prebuild`
 1. Android:
+    1. Perform:
+       ```
+       echo "" >> android/gradle.properties
+       echo "org.gradle.workers.max=2" >> android/gradle.properties
+       ```
+    1. Set [`versionCode`](https://developer.android.com/studio/publish/versioning.html) in `android/app/build.gradle` to YYYYMMDD and then a revision number such as 1; for example:
+       ```
+       versionCode 202610211
+       ```
     1. Update `android/app/src/main/res/values/styles.xml`
         1. Set `<item name="android:windowTranslucentStatus">true</item>` within the top section.
     1. `sudo rm -rf /tmp/metro-cache/`
